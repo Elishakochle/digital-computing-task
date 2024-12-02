@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            padding: 50px;
+            border-radius: 10%;
+            border: solid 3px black;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
+        }
+
+        .button {
+            height: 40px;
+            width: 40px;
+            border: solid 1px rgb(88, 87, 87);
+            background-color: rgb(152, 135, 247);
+            box-shadow: 1px 1px 1px 1px grey;
+        }
+    </style>
+    <script>
+        var x, y, result
+
+        function add() {
+            x = document.getElementById("num1").value
+            y = document.getElementById("num2").value
+
+            result = parseInt(x) + parseInt(y)
+            document.getElementById("v").value = result
+
+
+
+
+        }
+        function sub() {
+            x = document.getElementById("num1").value
+            y = document.getElementById("num2").value
+
+            result = parseInt(x) - parseInt(y)
+            document.getElementById("v").value = result
+
+
+
+
+        }
+        
+
+    </script>
+</head>
+
+
+<body>
+
+    <div class="box">
+        <div>
+            <input id="num1" class="mt-10" type="text" placeholder="input1"> <br>
+            <input id="num2" class="mt-10" type="text" placeholder="input2">
+        </div>
+        <div class="mt-10" style="display: flex; justify-content:space-around; align-items: center; margin-top: 50px;">
+            <button onclick="add()" class="button" type="button">+</button>
+            <button onclick="add()" class="button">-</button>
+            <button onclick="add()" class="button">*</button>
+            <button onclick="add()" class="button">/</button>
+        </div>
+
+    </div>
+    <div class="box">
+        <h1 id="Result">Result</h1>
+        <input id="v" class="mt-10" type="text" placeholder="output" onclick="result">
+    </div>
+
+
+</body>
+
+</html>
